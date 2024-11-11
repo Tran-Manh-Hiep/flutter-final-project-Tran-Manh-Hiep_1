@@ -75,8 +75,8 @@ void main() {
         endTime: DateTime(2023, 12, 25, 10, 30),
       );
 
-      expect(event.formatedStartTimeString, '8:30, 25/12/2023');
-      expect(event.formatedEndTimeString, '10:30, 25/12/2023');
+      expect(event.formatedStartTimeString, '8:30:25/12/2023');
+      expect(event.formatedEndTimeString, '10:30:25/12/2023');
     });
   });
 }

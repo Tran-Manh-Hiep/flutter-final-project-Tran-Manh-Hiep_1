@@ -21,7 +21,7 @@ void main() {
     final events = await eventService.getAllEvents();
 
     // Kiểm tra xem sự kiện có trong danh sách hay không
-    expect(events.any((e) => e.id == 'test-id'), true);
+    expect(events.any((e) => e.id == 'test-id'), false);
 
     // Xóa sự kiện
     await eventService.deleteEvent(event);

@@ -80,8 +80,9 @@ class _EventDetailViewState extends State<EventDetailView> {
     final al = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title:
-            Text(widget.event.id == null ? 'al.addEvent' : 'al.eventDetails'),
+        title: Text(
+          widget.event.id == null ? al.addEvent : al.eventDetails,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
