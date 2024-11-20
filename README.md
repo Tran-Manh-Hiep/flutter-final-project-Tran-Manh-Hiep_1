@@ -1,87 +1,32 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/lqx5bn9m)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=16979984&assignment_repo_type=AssignmentRepo)
-# Bài kiểm tra giữa kỳ - Bài 1
-- **Môn học:** Phát triển ứng dụng di động đa nền tảng 1
-- **Giảng viên:** GVC.TS. Trần Trung Chuyên
-- **Sinh viên:** 
-- **Mã sinh viên:** 
-- **Lớp:**
-- **Đề tài:** Xây dựng và kiểm thử ứng dụng Quản lý sự kiện
+1. Mô tả quá trình phát triển
+Trong quá trình phát triển ứng dụng "Event Manager", mục tiêu chính của dự án là xây dựng một ứng dụng quản lý sự kiện cho người dùng với các tính năng chính bao gồm:
 
-Chào mừng bạn đến với dự án Quản lý sự kiện! Tệp README này sẽ hướng dẫn bạn hoàn thành bài tập.
+Xem lịch và quản lý sự kiện: Người dùng có thể tạo mới, sửa đổi, và xóa các sự kiện.
+Hỗ trợ đa ngôn ngữ: Ứng dụng hỗ trợ tiếng Anh và tiếng Việt.
+Lưu trữ dữ liệu sự kiện: Dữ liệu sự kiện được lưu trữ trên thiết bị người dùng bằng cách sử dụng một hệ thống lưu trữ cục bộ.
+2. Các thư viện đã sử dụng
+Trong quá trình phát triển ứng dụng, các thư viện sau đây đã được sử dụng:
 
-## Cấu trúc Dự án
+syncfusion_flutter_calendar: Thư viện này cung cấp các widget lịch cho phép hiển thị các sự kiện với nhiều chế độ xem khác nhau như xem theo ngày, tuần, tháng, và lịch làm việc. Nó giúp tạo ra giao diện lịch linh hoạt và dễ dàng tích hợp vào ứng dụng.
 
-Dưới đây là tổng quan về cấu trúc dự án:
+flutter_localizations: Thư viện này hỗ trợ các tính năng đa ngôn ngữ trong ứng dụng Flutter. Em sử dụng nó để cung cấp khả năng hiển thị nội dung đa ngôn ngữ (tiếng Anh và tiếng Việt) trong ứng dụng.
 
-```
-/.github/workflows/
-  flutter_test.yml
-/test/
-  event_model_test.dart
-  event_service_test.dart
-  event_view_test.dart
-  main_test.dart
-  event_detail_view_test.dart
-/lib/
-  main.dart
-```
+intl: Đây là thư viện hỗ trợ quốc tế hóa và địa phương hóa, giúp chuyển đổi và xử lý các chuỗi văn bản dựa trên ngôn ngữ của người dùng. Thư viện này hỗ trợ việc tạo ra các tệp .arb cho các ngôn ngữ khác nhau.
 
-## Bắt đầu
+localstore: Thư viện này được sử dụng để lưu trữ dữ liệu cục bộ trong ứng dụng. Các sự kiện người dùng tạo ra sẽ được lưu trữ trong bộ nhớ của thiết bị sử dụng ứng dụng.
 
-### Yêu cầu
+flutter_test và flutter_lints: Được sử dụng để kiểm thử và kiểm tra chất lượng mã nguồn.
 
-Đảm bảo rằng bạn đã cài đặt Flutter phiên bản 3.24.3 trở lên trên máy của mình. Bạn có thể làm theo hướng dẫn [tại đây](https://flutter.dev/docs/get-started/install) để cài đặt Flutter.
+3. Kiểm thử đã thực hiện
+Trong quá trình phát triển ứng dụng, em đã thực hiện các kiểm thử sau:
 
-### Thiết lập Dự án
+Kiểm thử chức năng: Em đã kiểm tra tính năng tạo mới, sửa đổi, và xóa sự kiện trong ứng dụng. Điều này bao gồm việc đảm bảo rằng các sự kiện được lưu trữ chính xác và có thể hiển thị đúng trong giao diện lịch.
 
-1. **Clone repository:**
+Kiểm thử giao diện người dùng (UI): Em đã kiểm tra các chế độ xem của lịch (ngày, tuần, tháng, và lịch làm việc) và đảm bảo rằng người dùng có thể dễ dàng thao tác với các sự kiện trên lịch.
 
-Sau khi nhận bài tập từ Github Classroom, hãy sử dụng Visual Studio Code > View > Command Palette > Git: Clone để clone repository về máy của bạn. Hoặc sử dụng dòng lệnh sau:
+Kiểm thử đa ngôn ngữ: Các tệp .arb đã được tạo và kiểm tra với tiếng Anh và tiếng Việt. Em đã xác nhận rằng các chuỗi văn bản trong ứng dụng thay đổi đúng khi người dùng chuyển đổi ngôn ngữ.
 
-   ```sh
-   git clone <repository-url>
-   ```
-Trong đó `<repository-url>` là URL của repository bạn vừa nhận được.
+Kiểm thử dữ liệu lưu trữ cục bộ: Em đã kiểm tra việc lưu trữ và tải lại các sự kiện từ bộ nhớ cục bộ trên thiết bị người dùng. Các sự kiện được lưu trữ đúng và có thể truy xuất lại sau khi đóng và mở lại ứng dụng.
 
-2. **Cài đặt các phụ thuộc:**
-
-Sau khi clone repository, mở thư mục dự án trong Visual Studio Code và chạy lệnh sau để cài đặt các phụ thuộc:
-
-   ```sh
-   flutter pub get
-   ```
-
-Phát triển ứng dụng của bạn bắt đầu bằng cách xem clip hướng dẫn sau:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_qlCQVKW2jQ?si=tHhBuqRnOGaWR7xB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Chạy kiểm thử
-
-Dự án bao gồm một số tệp kiểm thử nằm trong thư mục `test`. Các kiểm thử này sẽ tự động chạy bằng GitHub Actions như được định nghĩa trong tệp `.github/workflows/flutter_test.yml`.
-
-Để chạy kiểm thử trên máy cục bộ, sử dụng lệnh sau:
-
-```sh
-flutter test
-```
-
-### Các tệp kiểm thử
-
-- **main_test.dart:** Kiểm thử khởi động ứng dụng chính.
-- **event_model_test.dart:** Kiểm thử lớp `EventModel`.
-- **event_service_test.dart:** Kiểm thử lớp `EventService`.
-- **event_view_test.dart:** Kiểm thử widget `EventView`.
-- **event_detail_view_test.dart:** Kiểm thử widget 
-`EventDetailView`.
-
-### Hoàn thành bài tập
-
-1. **Xem lại các kiểm thử đã cung cấp:** Hiểu rõ mỗi kiểm thử đang kiểm tra điều gì.
-2. **Triển khai chức năng cần thiết:** Viết mã cần thiết trong thư mục `lib` để đảm bảo tất cả các kiểm thử đều thành công.
-3. **Chạy kiểm thử:** Đảm bảo tất cả các kiểm thử đều thành công bằng cách chạy `flutter test`.
-
-### Nộp Bài tập
-
-Khi bạn đã hoàn thành bài tập và tất cả các kiểm thử đều thành công, hãy commit và push mã nguồn của mình lên Github. Bạn có thể kiểm tra kết quả kiểm thử trên tab Actions của repository. Nếu Status là Success, nghĩa la bạn đã hoàn thành bài tập.
-
-Chúc bạn may mắn với bài tập!
+4. Kết luận
+Ứng dụng "Event Manager" đã hoàn thành với các tính năng chính hoạt động ổn định. Quá trình phát triển diễn ra suôn sẻ với việc sử dụng các thư viện như syncfusion_flutter_calendar, flutter_localizations, và localstore. Kiểm thử đã được thực hiện để đảm bảo các tính năng hoạt động chính xác, đặc biệt là các chức năng liên quan đến lịch và quản lý sự kiện. Ứng dụng hỗ trợ đa ngôn ngữ và có khả năng lưu trữ dữ liệu cục bộ hiệu quả.
